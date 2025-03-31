@@ -50,5 +50,6 @@ function sketch2(e) {
     e.noFill();
     e.rect(centerX, centerY, squareSize, squareSize);
   };
-
 }
+
+new p5(sketch2);
