@@ -32,5 +32,23 @@ function sketch1(f) {
 new p5(sketch1);
 
 function sketch2(e) {
+  e.setup = function() {
+   e.createCanvas(400, 400);
+    e.background(255);
+    e.noFill();
+  };
+
+  e.draw = function() {
+    let centerX = e.width / 2;
+    let centerY = e.height / 2;
+    let squareSize = e.random(0, 10000);
+    let halfSize = squareSize / 2;
+
+    e.rectMode(e.CENTER);
+    e.stroke(0);
+    e.strokeWeight(3);
+    e.noFill();
+    e.rect(centerX, centerY, squareSize, squareSize);
+  };
 
 }
