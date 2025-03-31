@@ -1,6 +1,9 @@
 function setup() {
   createCanvas(400, 400);
-  let cols = 10;
+  noLoop();
+}
+function draw() {
+  let cols =10;
   let rows = 10;
   let squareSize = width / cols;
    for (let i= 0; i < cols; i++) {
@@ -16,5 +19,9 @@ function setup() {
         line(x + squareSize, y, x, y + squareSize);
       }
     }
-   }
+  }
+}
+
+function mousePressed() {
+  redraw();
 }
